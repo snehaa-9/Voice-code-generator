@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>voice code generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  
+  <header class="head">
+    <h1> VOICE CODE GENERATOR </h1>
+    <p> A voice based coding assistant that converts spoken instruction into syntactically correct code in your selected language. </p>
+  </header>
+  
+  <main>
+    <div class= "container">
+      <p> select your preferred programming language for code generation-</p>
+      <select name="language" id="language">
+         <option class="opt" value="select language"> Select Language </option>
+        <option class="opt" value="javascript">javascript</option>
+        <option class="opt" value="java">java</option>
+        <option class="opt" value="c">c</option>
+        <option class="opt" value="python">python</option>
+        <option class="opt" value="c++">c++</option>
+      </select>  
+ </div>
+      <div class= "container2">
+        <button class= "btn" id="start">
+          <svg width="20" height="20" viewBox="0 0 24 24">
+          <path fill="white" d="M12 14a3 3 0 003-3V5a3 3 0 10-6 0v6a3 3 0 003 3z"/>
+          <path fill="white" d="M19 11a1 1 0 10-2 0 5 5 0 01-10 0 1 1 0 10-2 0 7 7 0 0013.9 1H21v-2h-2z"/>
+          </svg>
+         <p>Start Recording</p> 
+        </button>
+         <button class="btn" id="stop">Stop Recording</button>
+      </div>   
+    <textarea class="textarea" id="text"  placeholder="Your code will appear here..."></textarea>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
